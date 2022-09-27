@@ -5,11 +5,13 @@
 //  Created by 김동혁 on 2022/09/26.
 //
 
+import FirebaseDatabase
+import Kingfisher
 import UIKit
 import SnapKit
 
 class DetailView: UIView {
-    private let appIconImageView: UIImageView = {
+    private lazy var appIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
@@ -18,7 +20,7 @@ class DetailView: UIView {
         return imageView
     }()
     
-    private let titleLabel: UILabel = {
+    private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 20.0, weight: .bold)
         label.numberOfLines = 0
@@ -27,7 +29,7 @@ class DetailView: UIView {
         return label
     }()
     
-    private let subTitleLabel: UILabel = {
+    private lazy var subTitleLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14.0, weight: .medium)
         label.textColor = .secondaryLabel
@@ -35,7 +37,7 @@ class DetailView: UIView {
         return label
     }()
     
-    private let downloadButton: UIButton = {
+    private lazy var downloadButton: UIButton = {
         let button = UIButton()
         button.setTitle("받기", for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 13.0, weight: .bold)
@@ -46,11 +48,10 @@ class DetailView: UIView {
         return button
     }()
     
-    private let shareButton: UIButton = {
+    private lazy var shareButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "square.and.arrow.up"), for: .normal)
         button.tintColor = .systemBlue
-        //        button.addTarget(self, action: #selector(tapShareButton), for: .touchUpInside)
         
         return button
     }()
@@ -73,8 +74,8 @@ class DetailView: UIView {
         backgroundColor = .systemBackground
         
         setupViews()
+        fetchLogoImage()
         
-        appIconImageView.backgroundColor = .lightGray
         titleLabel.text = """
                     비패밀리 메신저
                     Befamily Messenger
@@ -128,10 +129,18 @@ private extension DetailView {
         }
     }
     
-    //    @objc func tapShareButton() {
-    //        let activityItems: [Any] = [today.title]
-    //        let activityViewController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
-    //
-    //        present(activityViewController, animated: true)
-    //    }
+    func fetchLogoImage() {
+        let ref: DatabaseReference!
+        ref = Database.database().reference(withPath: "results").child("0")
+        
+        ref.child("artworkUrl100").observeSingleEvent(of: .value) { snapshot, _ in
+            guard let artworkUrl = snapshot.value as? String else { return }
+            
+            let url = URL(string: artworkUrl)
+            
+            DispatchQueue.main.async {
+                self.appIconImageView.kf.setImage(with: url)
+            }
+        }
+    }
 }

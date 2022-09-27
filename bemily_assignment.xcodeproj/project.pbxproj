@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B927AD190FD5A6682A5BA25D /* Pods_bemily_assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08963BB8B570621B611EDD91 /* Pods_bemily_assignment.framework */; };
+		CE3B587428E2E0520075F91C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE3B587328E2E0520075F91C /* GoogleService-Info.plist */; };
+		CE3B587728E2E6830075F91C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CE3B587628E2E6830075F91C /* Kingfisher */; };
 		CE8965BC28E152D9003F1CE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8965BB28E152D9003F1CE8 /* AppDelegate.swift */; };
 		CE8965BE28E152D9003F1CE8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8965BD28E152D9003F1CE8 /* SceneDelegate.swift */; };
 		CE8965C528E152DA003F1CE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8965C428E152DA003F1CE8 /* Assets.xcassets */; };
@@ -23,6 +26,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08963BB8B570621B611EDD91 /* Pods_bemily_assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bemily_assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28FEBCBF101BEBE7FFA42084 /* Pods-bemily_assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bemily_assignment.release.xcconfig"; path = "Target Support Files/Pods-bemily_assignment/Pods-bemily_assignment.release.xcconfig"; sourceTree = "<group>"; };
+		5B894F70733263A50226517A /* Pods-bemily_assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bemily_assignment.debug.xcconfig"; path = "Target Support Files/Pods-bemily_assignment/Pods-bemily_assignment.debug.xcconfig"; sourceTree = "<group>"; };
+		CE3B587328E2E0520075F91C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE8965B828E152D9003F1CE8 /* bemily_assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bemily_assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8965BB28E152D9003F1CE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE8965BD28E152D9003F1CE8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,18 +51,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3B587728E2E6830075F91C /* Kingfisher in Frameworks */,
 				CE8965D328E15A1A003F1CE8 /* SnapKit in Frameworks */,
+				B927AD190FD5A6682A5BA25D /* Pods_bemily_assignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D4823ED91B35E02C88DC1E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5B894F70733263A50226517A /* Pods-bemily_assignment.debug.xcconfig */,
+				28FEBCBF101BEBE7FFA42084 /* Pods-bemily_assignment.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		93DC9048C1891D79B3A2322A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				08963BB8B570621B611EDD91 /* Pods_bemily_assignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE8965AF28E152D9003F1CE8 = {
 			isa = PBXGroup;
 			children = (
 				CE8965BA28E152D9003F1CE8 /* bemily_assignment */,
 				CE8965B928E152D9003F1CE8 /* Products */,
+				8D4823ED91B35E02C88DC1E2 /* Pods */,
+				93DC9048C1891D79B3A2322A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +104,7 @@
 				CE8965C428E152DA003F1CE8 /* Assets.xcassets */,
 				CE8965C628E152DA003F1CE8 /* LaunchScreen.storyboard */,
 				CE8965C928E152DA003F1CE8 /* Info.plist */,
+				CE3B587328E2E0520075F91C /* GoogleService-Info.plist */,
 			);
 			path = bemily_assignment;
 			sourceTree = "<group>";
@@ -134,9 +163,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE8965CC28E152DA003F1CE8 /* Build configuration list for PBXNativeTarget "bemily_assignment" */;
 			buildPhases = (
+				446DBBE122FA2787E71572AD /* [CP] Check Pods Manifest.lock */,
 				CE8965B428E152D9003F1CE8 /* Sources */,
 				CE8965B528E152D9003F1CE8 /* Frameworks */,
 				CE8965B628E152D9003F1CE8 /* Resources */,
+				2C19842A7EA703B1AC40529F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,6 +176,7 @@
 			name = bemily_assignment;
 			packageProductDependencies = (
 				CE8965D228E15A1A003F1CE8 /* SnapKit */,
+				CE3B587628E2E6830075F91C /* Kingfisher */,
 			);
 			productName = bemily_assignment;
 			productReference = CE8965B828E152D9003F1CE8 /* bemily_assignment.app */;
@@ -166,7 +198,7 @@
 				};
 			};
 			buildConfigurationList = CE8965B328E152D9003F1CE8 /* Build configuration list for PBXProject "bemily_assignment" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -176,6 +208,7 @@
 			mainGroup = CE8965AF28E152D9003F1CE8;
 			packageReferences = (
 				CE8965D128E15A1A003F1CE8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				CE3B587528E2E6830075F91C /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = CE8965B928E152D9003F1CE8 /* Products */;
 			projectDirPath = "";
@@ -193,10 +226,53 @@
 			files = (
 				CE8965C828E152DA003F1CE8 /* LaunchScreen.storyboard in Resources */,
 				CE8965C528E152DA003F1CE8 /* Assets.xcassets in Resources */,
+				CE3B587428E2E0520075F91C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C19842A7EA703B1AC40529F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bemily_assignment/Pods-bemily_assignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bemily_assignment/Pods-bemily_assignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bemily_assignment/Pods-bemily_assignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		446DBBE122FA2787E71572AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bemily_assignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CE8965B428E152D9003F1CE8 /* Sources */ = {
@@ -346,6 +422,7 @@
 		};
 		CE8965CD28E152DA003F1CE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B894F70733263A50226517A /* Pods-bemily_assignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -375,6 +452,7 @@
 		};
 		CE8965CE28E152DA003F1CE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28FEBCBF101BEBE7FFA42084 /* Pods-bemily_assignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -426,6 +504,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CE3B587528E2E6830075F91C /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		CE8965D128E15A1A003F1CE8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -437,6 +523,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE3B587628E2E6830075F91C /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE3B587528E2E6830075F91C /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		CE8965D228E15A1A003F1CE8 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE8965D128E15A1A003F1CE8 /* XCRemoteSwiftPackageReference "SnapKit" */;

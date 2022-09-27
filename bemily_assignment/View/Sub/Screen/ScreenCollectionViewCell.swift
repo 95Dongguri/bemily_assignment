@@ -5,6 +5,7 @@
 //  Created by 김동혁 on 2022/09/26.
 //
 
+import Kingfisher
 import UIKit
 import SnapKit
 
@@ -22,10 +23,14 @@ class ScreenCollectionViewCell: UICollectionViewCell {
         return imageView
     }()
     
-    func setup() {
+    func setup(_ screen: String) {
         setupLayout()
+
+        let url = URL(string: screen)
         
-        imageView.backgroundColor = .systemGray
+        DispatchQueue.main.async {
+            self.imageView.kf.setImage(with: url)
+        }
     }
 }
 
