@@ -75,7 +75,7 @@ extension InfoView: UITableViewDataSource {
             case "artistName":
                 key = "제공자"
             case "fileSizeBytes":
-                key = "앱 바이트 크기"
+                key = "크기"
                 let size = Int(info)! / 1024 / 1024
                 info = String(size) + "MB"
             case "primaryGenreName":

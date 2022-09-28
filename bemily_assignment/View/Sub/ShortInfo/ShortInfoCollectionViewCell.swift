@@ -13,7 +13,7 @@ class ShortInfoCollectionViewCell: UICollectionViewCell {
     
     private lazy var topLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 12.0, weight: .bold)
+        label.font = .systemFont(ofSize: 15.0, weight: .medium)
         label.textAlignment = .center
         label.textColor = .secondaryLabel
         
@@ -53,7 +53,7 @@ private extension ShortInfoCollectionViewCell {
         
         bottomLabel.snp.makeConstraints {
             $0.leading.trailing.equalTo(topLabel)
-            $0.top.equalTo(topLabel.snp.bottom).offset(24.0)
+            $0.bottom.equalToSuperview().inset(16.0)
         }
     }
 }

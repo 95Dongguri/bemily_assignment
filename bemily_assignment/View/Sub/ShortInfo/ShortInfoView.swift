@@ -66,12 +66,13 @@ extension ShortInfoView: UICollectionViewDataSource {
         ref = Database.database().reference(withPath: "results").child("0")
         
         ref.child(short).observeSingleEvent(of: .value) { snapshot, _ in
-            guard let info = snapshot.value else { return }
+            guard var info = snapshot.value else { return }
             var key = short
             
             switch short {
             case "averageUserRating":
                 key = "평점"
+                info = round(info as! Double * 10) / 10
             case "contentAdvisoryRating":
                 key = "연령"
             case "primaryGenreName":

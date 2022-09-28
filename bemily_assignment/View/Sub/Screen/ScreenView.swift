@@ -56,7 +56,7 @@ extension ScreenView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ScreenCollectionViewCell.identifier, for: indexPath) as? ScreenCollectionViewCell else { return UICollectionViewCell() }
         
-        let screen = screenList[indexPath.item]
+        let screen = screenList[indexPath.row]
         cell.setup(screen)
         
         return cell
