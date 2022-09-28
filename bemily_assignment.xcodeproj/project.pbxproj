@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B927AD190FD5A6682A5BA25D /* Pods_bemily_assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08963BB8B570621B611EDD91 /* Pods_bemily_assignment.framework */; };
+		CE23037A28E406F700A864E2 /* ShortInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23037928E406F700A864E2 /* ShortInfoView.swift */; };
+		CE23037D28E4072000A864E2 /* ShortInfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23037C28E4072000A864E2 /* ShortInfoCollectionViewCell.swift */; };
+		CE23038028E4284B00A864E2 /* InfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE23037F28E4284B00A864E2 /* InfoTableViewCell.swift */; };
 		CE3B587428E2E0520075F91C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE3B587328E2E0520075F91C /* GoogleService-Info.plist */; };
 		CE3B587728E2E6830075F91C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = CE3B587628E2E6830075F91C /* Kingfisher */; };
 		CE8965BC28E152D9003F1CE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8965BB28E152D9003F1CE8 /* AppDelegate.swift */; };
@@ -29,6 +32,9 @@
 		08963BB8B570621B611EDD91 /* Pods_bemily_assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bemily_assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28FEBCBF101BEBE7FFA42084 /* Pods-bemily_assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bemily_assignment.release.xcconfig"; path = "Target Support Files/Pods-bemily_assignment/Pods-bemily_assignment.release.xcconfig"; sourceTree = "<group>"; };
 		5B894F70733263A50226517A /* Pods-bemily_assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bemily_assignment.debug.xcconfig"; path = "Target Support Files/Pods-bemily_assignment/Pods-bemily_assignment.debug.xcconfig"; sourceTree = "<group>"; };
+		CE23037928E406F700A864E2 /* ShortInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortInfoView.swift; sourceTree = "<group>"; };
+		CE23037C28E4072000A864E2 /* ShortInfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortInfoCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE23037F28E4284B00A864E2 /* InfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTableViewCell.swift; sourceTree = "<group>"; };
 		CE3B587328E2E0520075F91C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CE8965B828E152D9003F1CE8 /* bemily_assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bemily_assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE8965BB28E152D9003F1CE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +81,24 @@
 				08963BB8B570621B611EDD91 /* Pods_bemily_assignment.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE23037B28E4070300A864E2 /* ShortInfo */ = {
+			isa = PBXGroup;
+			children = (
+				CE23037928E406F700A864E2 /* ShortInfoView.swift */,
+				CE23037C28E4072000A864E2 /* ShortInfoCollectionViewCell.swift */,
+			);
+			path = ShortInfo;
+			sourceTree = "<group>";
+		};
+		CE23037E28E4283500A864E2 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B0F4F28E162CA00764575 /* InfoView.swift */,
+				CE23037F28E4284B00A864E2 /* InfoTableViewCell.swift */,
+			);
+			path = Info;
 			sourceTree = "<group>";
 		};
 		CE8965AF28E152D9003F1CE8 = {
@@ -139,10 +163,11 @@
 			isa = PBXGroup;
 			children = (
 				CE9B0F4D28E15FF700764575 /* DetailView.swift */,
+				CE23037B28E4070300A864E2 /* ShortInfo */,
 				CE9B0F5528E164A600764575 /* Screen */,
 				CE9B0F5828E182D400764575 /* DescriptionView.swift */,
 				CE9B0F5328E1649300764575 /* ReleaseView.swift */,
-				CE9B0F4F28E162CA00764575 /* InfoView.swift */,
+				CE23037E28E4283500A864E2 /* Info */,
 			);
 			path = Sub;
 			sourceTree = "<group>";
@@ -279,13 +304,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE23038028E4284B00A864E2 /* InfoTableViewCell.swift in Sources */,
 				CE9B0F5428E1649300764575 /* ReleaseView.swift in Sources */,
 				CE8965BC28E152D9003F1CE8 /* AppDelegate.swift in Sources */,
 				CE9B0F5728E164B800764575 /* ScreenCollectionViewCell.swift in Sources */,
 				CE9B0F4728E15EBD00764575 /* BemilyDetailViewController.swift in Sources */,
 				CE9B0F4A28E15EE100764575 /* SeparatorView.swift in Sources */,
+				CE23037D28E4072000A864E2 /* ShortInfoCollectionViewCell.swift in Sources */,
 				CE9B0F4E28E15FF700764575 /* DetailView.swift in Sources */,
 				CE9B0F5028E162CA00764575 /* InfoView.swift in Sources */,
+				CE23037A28E406F700A864E2 /* ShortInfoView.swift in Sources */,
 				CE8965BE28E152D9003F1CE8 /* SceneDelegate.swift in Sources */,
 				CE9B0F5228E163BC00764575 /* ScreenView.swift in Sources */,
 				CE9B0F5928E182D400764575 /* DescriptionView.swift in Sources */,

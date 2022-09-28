@@ -28,7 +28,7 @@ class ReleaseView: UIView {
     private lazy var releaseLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 16.0, weight: .medium)
-        label.numberOfLines = 2
+        label.numberOfLines = 3
         
         return label
     }()

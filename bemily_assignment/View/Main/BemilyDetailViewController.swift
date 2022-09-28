@@ -20,18 +20,19 @@ class BemilyDetailViewController: UIViewController {
         stackView.spacing = 0.0
         
         let detailView = DetailView(frame: .zero)
+        let shortInfoView = ShortInfoView(frame: .zero)
         let screenView = ScreenView(frame: .zero)
         let descriptionView = DescriptionView(frame: .zero)
         let releaseView = ReleaseView(frame: .zero)
-
-//        let rankingFeatureSectionView = RankingFeatureSectionView(frame: .zero)
-//        let exchangeCodeButtonView = ExchangeCodeButtonView(frame: .zero)
+        let infoView = InfoView(frame: .zero)
         
         [
             detailView,
+            shortInfoView,
             screenView,
             descriptionView,
-            releaseView
+            releaseView,
+            infoView
         ].forEach {
             stackView.addArrangedSubview($0)
         }
