@@ -10,18 +10,14 @@ import UIKit
 import SnapKit
 
 class ScreenView: UIView {
-    var screenList: [String] = []
-    
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.isScrollEnabled = true
-//        collectionView.isPagingEnabled = true
         collectionView.backgroundColor = .systemBackground
         collectionView.showsHorizontalScrollIndicator = false
         
@@ -31,6 +27,8 @@ class ScreenView: UIView {
     }()
     
     private let separatorView = SeparatorView(frame: .zero)
+    
+    var screenList: [String] = []
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -69,7 +67,7 @@ extension ScreenView: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0.0, left: 16.0, bottom: 0.0, right: 8.0)
+        return UIEdgeInsets(top: 0.0, left: 16.0, bottom: 0.0, right: 16.0)
     }
 }
 

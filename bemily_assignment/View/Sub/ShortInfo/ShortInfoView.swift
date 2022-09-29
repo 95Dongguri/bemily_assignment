@@ -15,7 +15,6 @@ class ShortInfoView: UIView {
         layout.scrollDirection = .horizontal
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.isScrollEnabled = true
@@ -40,15 +39,11 @@ class ShortInfoView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setup()
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setup() {
-        setupViews()
     }
 }
 

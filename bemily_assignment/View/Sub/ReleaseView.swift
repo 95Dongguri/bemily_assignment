@@ -13,6 +13,7 @@ class ReleaseView: UIView {
     private lazy var newLabel: UILabel = {
         let label = UILabel()
         label.font = .systemFont(ofSize: 24.0, weight: .bold)
+        label.text = "새로운 기능"
         
         return label
     }()
@@ -57,9 +58,7 @@ class ReleaseView: UIView {
     
     func setup() {
         setupViews()
-        fetchRelease()
-        
-        newLabel.text = "새로운 기능"
+        fetchReleaseNote()
     }
 }
 
@@ -101,7 +100,7 @@ private extension ReleaseView {
         }
     }
     
-    func fetchRelease() {
+    func fetchReleaseNote() {
         let ref: DatabaseReference!
         ref = Database.database().reference(withPath: "results").child("0")
         

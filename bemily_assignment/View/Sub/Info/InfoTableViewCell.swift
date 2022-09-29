@@ -28,7 +28,6 @@ class InfoTableViewCell: UITableViewCell {
     
     func setup(_ title: String, _ info: String) {
         setupLayout()
-        selectionStyle = .none
         
         titleLabel.text = title
         infoLabel.text = info
@@ -37,6 +36,8 @@ class InfoTableViewCell: UITableViewCell {
 
 private extension InfoTableViewCell {
     func setupLayout() {
+        selectionStyle = .none
+        
         [
             titleLabel,
             infoLabel

@@ -25,6 +25,7 @@ class DetailView: UIView {
         label.font = .systemFont(ofSize: 20.0, weight: .bold)
         label.numberOfLines = 0
         label.textColor = .label
+        label.text = "비패밀리 메신저\nBefamily Messenger"
         
         return label
     }()
@@ -33,6 +34,7 @@ class DetailView: UIView {
         let label = UILabel()
         label.font = .systemFont(ofSize: 14.0, weight: .medium)
         label.textColor = .secondaryLabel
+        label.text = "가까운 사람들끼리 쓰는 메신저"
         
         return label
     }()
@@ -71,22 +73,15 @@ class DetailView: UIView {
     }
     
     func setup() {
-        backgroundColor = .systemBackground
-        
         setupViews()
         fetchLogoImage()
-        
-        titleLabel.text = """
-                    비패밀리 메신저
-                    Befamily Messenger
-                    """
-        subTitleLabel.text = "가까운 사람들끼리 쓰는 메신저"
     }
-    
 }
 
 private extension DetailView {
     func setupViews() {
+        backgroundColor = .systemBackground
+        
         [
             appIconImageView,
             titleLabel,
